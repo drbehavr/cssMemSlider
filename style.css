@@ -50,7 +50,7 @@ body {
    height: 100%;
    background: no-repeat;
  
-   background-image: url(./assets/sabdwcat.jpg);
+   background-image: url(./assets/selfie.jpg);
    background-size: 75% 400px;
    
    
@@ -61,7 +61,7 @@ body {
    height: 100%;
    background: no-repeat;
  
-   background-image: url(./assets/driver.jpg);
+   background-image: url(./assets/dinner.jpg);
    background-size: 50% 400px;
    
  }
@@ -70,7 +70,7 @@ body {
    height: 100%;
    background: no-repeat;
  overflow: hidden;
-   background-image: url(./assets/bender.jpeg);
+   background-image: url(./assets/images.jpg);
    background-size: 25% 400px;
    
  }
@@ -89,6 +89,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   padding: 10px 10px 0 10px;
+  transition: all 0.4s ease;
 }
 .descr {
   display: flex;
