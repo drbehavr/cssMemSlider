@@ -3,7 +3,7 @@
 	display: flex;
   flex-direction: column;
 	width: 41%;
-   height: 500px;
+   height: 442px;
    margin: 0 auto;
    overflow: hidden;
 
@@ -12,7 +12,7 @@ body {
 	   font-family: 'Jura', sans-serif;
 		font-weight: 500;
 		font-size: 16px;
-		background-color: lavender;
+		background: linear-gradient(90deg, #aea4e3, #d3ffe8);
 	
 	
 }
@@ -28,7 +28,7 @@ body {
 	font-weight: 500;
 	margin: 0 auto;
 }
-.title {
+.title { font-weight: 700;
 	line-height: 42px;
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.6);
@@ -107,6 +107,12 @@ body {
   background-color: #71abff;
   border: 0.125rem solid #71abff;
   transition: all 0.4s ease;
+}
+.btn-wrap {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+-23px 0 20px -23px rgba(0, 0, 0, .8),
+23px 0 20px -23px rgba(0, 0, 0, .8),
+0 0 40px rgba(0, 0, 0, .1) inset;
 }
 .btn-wrap:hover .btn {
   background-color: #ffffff;
@@ -188,4 +194,34 @@ input[name="r"] {
 .control> label {
   transition: all ease-in-out 0.4s;
   
+}
+/*adaptive*/
+@media (max-width:1040px) {
+body {
+  max-width: 100%;
+}
+}
+@media (max-width: 1006px) and (min-width:320px) {
+ .control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: center;
+ }
+ .text {
+   font-size: 18px;
+   text-align: center;
+ }
+ .wrapper {
+   gap: 2%;
+   width: 90%;
+ }
+ 
+}
+@media (max-width: 600px) and (min-width:320px) {
+  .wrapper {
+    
+    width: 100%;
+  }
 }
