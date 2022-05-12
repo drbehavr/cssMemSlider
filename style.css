@@ -85,10 +85,17 @@ body {
 /*txt*/
 .text {
   font-family: 'Jura';
- 
+ min-width: 100%;
   font-size: 20px;
   font-weight: 600;
   padding: 10px 10px 0 10px;
+}
+.descr {
+  display: flex;
+  flex-direction: row;
+  height: 41px;
+  width: 70%;
+  overflow: hidden;
 }
 
 
@@ -137,24 +144,40 @@ input[name="r"] {
   
   
 }
-#r1:checked ~ .label1 ~ .first {
+#r1:checked ~ .control > .slider-btns > .label1 > .first {
   background-color: whitesmoke;
   border: 0.125rem solid #3f51b5;
   
 }
-#r2:checked ~ .label2 > .sec{
+#r2:checked ~ .control > .slider-btns > .label2 > .sec {
   background-color: whitesmoke;
   border: 0.125rem solid #3f51b5;
   
 }
-#r3:checked ~ .label3 {
+#r3:checked ~ .control > .slider-btns > .label3 > .third {
   background-color: whitesmoke;
   border: 0.125rem solid #3f51b5;
 }
-#r4:checked ~ .label4 {
+#r4:checked ~ .control > .slider-btns > .label4 > .four{
   background-color: whitesmoke;
   border: 0.125rem solid #3f51b5;
 }
+
+
+
+#r1:checked ~ .control >  .descr  >.text {
+  transform: translateX(0);
+}
+#r2:checked ~ .control > .descr  >.text{
+  transform: translateX(-100%);
+}
+#r3:checked ~ .control >   .descr  >.text {
+  transform: translateX(-200%);
+}
+#r4:checked ~ .control >   .descr > .text {
+  transform: translateX(-300%);
+}
+
 /*animation*/
  
 .img {
