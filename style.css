@@ -101,6 +101,13 @@ body {
 
 
 /*cntrl*/
+.slider-btns {
+  display: flex;
+  width: 17%;
+  flex-direction: row;
+  gap: 10%;
+}
+
 .btn {
   width: 1rem;
   height: 1rem;
