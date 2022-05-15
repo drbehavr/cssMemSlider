@@ -1,0 +1,230 @@
+/*general properties*/
+.wrapper {
+	display: flex;
+  flex-direction: column;
+	width: 41%;
+   height: 28rem;
+   margin: 0 auto;
+   overflow: hidden;
+
+}
+body {
+	   font-family: 'Jura', sans-serif;
+		font-weight: 500;
+		
+		background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+	
+	
+}
+/*title*/
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height:4rem;
+	font-family: 'Jura';
+	font-size: 1.7rem;
+	font-weight: 500;
+	margin: 0 auto;
+}
+.title { font-weight: 700;
+
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.6);
+
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+/*main*/
+/*mems*/
+.img1-slide {
+   width: 100%;
+   height: 100%;
+   background: no-repeat;
+   background-image: url(./assets/itcat.png);
+   background-size: 100% 400px;
+   
+ }
+ .img2-slide {
+   width: 100%;
+   height: 100%;
+   background: no-repeat;
+ 
+   background-image: url(./assets/selfie.jpg);
+   background-size: 75% 400px;
+   
+   
+   
+ }
+ .img3-slide {
+   width: 100%;
+   height: 100%;
+   background: no-repeat;
+ 
+   background-image: url(./assets/dinner.jpg);
+   background-size: 50% 400px;
+   
+ }
+ .img4-slide {
+   width: 100%;
+   height: 100%;
+   background: no-repeat;
+ overflow: hidden;
+   background-image: url(./assets/images.jpg);
+   background-size: 25% 400px;
+   
+ }
+
+#slides {
+   width: 400%;
+   height: 100%;
+   display: flex;
+   transition: all 1s ease;
+   overflow: hidden;
+ }
+/*txt*/
+.text {
+  font-family: 'Jura';
+ min-width: 100%;
+  font-size: 1.35rem;
+  font-weight: 600;
+  padding: 10px 10px 0 10px;
+  transition: all 0.4s ease;
+}
+.descr {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  width: 70%;
+  overflow: hidden;
+}
+
+
+/*cntrl*/
+.btn {
+  width: 1rem;
+  height: 1rem;
+  background-color: #71abff;
+  border: 0.125rem solid #71abff;
+  transition: all 0.4s ease;
+}
+.btn-wrap {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+-23px 0 20px -23px rgba(0, 0, 0, .8),
+23px 0 20px -23px rgba(0, 0, 0, .8),
+0 0 40px rgba(0, 0, 0, .1) inset;
+}
+.btn-wrap:hover .btn {
+  background-color: #ffffff;
+  border: 0.125rem solid #3f51b5;
+}
+input[name="r"] {
+  display: none;
+}
+.control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+/*slide*/
+
+#r1:checked ~ #slides > .img1-slide  {
+  margin-left: 0;
+ 
+  
+  
+}
+#r2:checked ~ #slides > .img1-slide  {
+  margin-left: -33.4%;
+  }
+  
+#r3:checked ~ #slides > .img1-slide {
+  margin-left: -100%;
+}
+  
+#r4:checked ~ #slides > .img1-slide {
+  margin-left: -300%;
+  
+  
+}
+#r1:checked ~ .control > .slider-btns > .label1 > .first {
+  background-color: whitesmoke;
+  border: 0.125rem solid #3f51b5;
+  
+}
+#r2:checked ~ .control > .slider-btns > .label2 > .sec {
+  background-color: whitesmoke;
+  border: 0.125rem solid #3f51b5;
+  
+}
+#r3:checked ~ .control > .slider-btns > .label3 > .third {
+  background-color: whitesmoke;
+  border: 0.125rem solid #3f51b5;
+}
+#r4:checked ~ .control > .slider-btns > .label4 > .four{
+  background-color: whitesmoke;
+  border: 0.125rem solid #3f51b5;
+}
+
+
+
+#r1:checked ~ .control >  .descr  >.text {
+  transform: translateX(0);
+}
+#r2:checked ~ .control > .descr  >.text{
+  transform: translateX(-100%);
+}
+#r3:checked ~ .control >   .descr  >.text {
+  transform: translateX(-200%);
+}
+#r4:checked ~ .control >   .descr > .text {
+  transform: translateX(-300%);
+}
+
+/*animation*/
+ 
+.img {
+  transition: ease-in-out 0.5s;
+  
+}
+.control> label {
+  transition: all ease-in-out 0.4s;
+  
+}
+/*adaptive*/
+
+
+@media (max-width:1040px) {
+body {
+  max-width: 100%;
+}
+}
+@media (max-width: 1006px) and (min-width:320px) {
+ .control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: center;
+ }
+ .text {
+   font-size: 1.3rem;
+   text-align: center;
+ }
+ .wrapper {
+   gap: 2%;
+   width: 90%;
+ }
+ 
+}
+@media (max-width: 600px) and (min-width:320px) {
+  .wrapper {
+    
+    width: 100%;
+  }
+  .header {height: 4rem; }
+}
