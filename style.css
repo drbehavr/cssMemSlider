@@ -11,7 +11,7 @@
 body {
 	   font-family: 'Jura', sans-serif;
 		font-weight: 500;
-		font-size: 16px;
+		
 		background: linear-gradient(90deg, #aea4e3, #d3ffe8);
 	
 	
@@ -22,14 +22,14 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 50%;
-	height: 100px;
+	height:90px;
 	font-family: 'Jura';
 	font-size: 1.7rem;
 	font-weight: 500;
 	margin: 0 auto;
 }
 .title { font-weight: 700;
-	line-height: 42px;
+
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.6);
 
@@ -86,7 +86,7 @@ body {
 .text {
   font-family: 'Jura';
  min-width: 100%;
-  font-size: 20px;
+  font-size: 1.35rem;
   font-weight: 600;
   padding: 10px 10px 0 10px;
   transition: all 0.4s ease;
@@ -196,6 +196,8 @@ input[name="r"] {
   
 }
 /*adaptive*/
+
+
 @media (max-width:1040px) {
 body {
   max-width: 100%;
@@ -210,7 +212,7 @@ body {
   justify-content: center;
  }
  .text {
-   font-size: 18px;
+   font-size: 1.3rem;
    text-align: center;
  }
  .wrapper {
@@ -224,4 +226,5 @@ body {
     
     width: 100%;
   }
+  .header {height: 4rem; }
 }
